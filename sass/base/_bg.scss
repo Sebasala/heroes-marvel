@@ -1,0 +1,27 @@
+//COLORS
+body {
+	background-color: $light-bg-color-2;
+}
+
+#characters {
+	background-color: $light-bg-color-3;
+}
+
+#favourites {
+	background-color: $light-bg-color-1;
+}
+
+//IMAGES
+#characters h2,
+#favourites h2 {
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#characters h2 {
+	background-image: url("../img/icons/characters.png");
+}
+
+#favourites h2 {
+	background-image: url("../img/icons/favourites.png");	
+}

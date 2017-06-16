@@ -1,0 +1,26 @@
+//Modular Scale
+$type-scale: (
+	-1: 0.8333rem,
+	0: 1rem,
+	1: 1.2rem,
+	2: 1.44rem,
+	3: 1.728rem,
+	4: 2.0736rem
+);
+
+$line-heights: (
+  -1: $base-line-height,
+  0: $base-line-height,
+  1: $base-line-height,
+  2: $base-line-height,
+  3: $base-line-height * 2,
+  4: $base-line-height * 2,
+);
+
+@function type-scale($level) {
+	@return map-get($type-scale, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}

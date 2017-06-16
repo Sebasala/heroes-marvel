@@ -1,0 +1,51 @@
+//MARGINS PADDINGS AND BORDERS
+body,
+div,
+section,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+	margin-bottom: $base-line-height;
+}
+
+section {
+	padding: $base-line-height $base-line-height 0;
+}
+
+#characters h2,
+#favourites h2 {
+	padding-left: $base-line-height * 3;
+}
+
+//CLEAR FIX
+section {
+	@include clear-fix;
+}
+
+//WIDTHS
+body {
+	max-width: 100%;
+}
+
+//COLUMNS
+main {
+	@media only screen and (min-width: $bp-2) {
+		@include columns((2,1));
+		max-width: 1360px;
+	}
+}

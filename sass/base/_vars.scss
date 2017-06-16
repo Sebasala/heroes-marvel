@@ -1,0 +1,37 @@
+//TYPOGRAPHY
+//Fonts
+$font-url:		'https://fonts.googleapis.com/css?family=Roboto:400,900';
+$font-family:	'Roboto', sans-serif;
+
+//Vertical Rhythm
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.5;
+
+//Text max width
+$text-max-width: 33rem;
+
+
+//COLORS
+//Color names
+$black: 		#2D2727;
+$gray: 			#7A7070;
+$light-gray-1: 	#EBEBEB;
+$light-gray-2: 	#F0F0F0;
+$light-gray-3: 	#F4F4F4;
+$white:			#FFFFFF;
+$red:			#EC1D23;
+
+//Colors usage
+$dark-text-color:	$black;
+$light-text-color:	$gray;
+$dark-bg-color:		$black;
+$light-bg-color-1:	$light-gray-1;
+$light-bg-color-2:	$light-gray-2;
+$light-bg-color-3:	$light-gray-3;
+$light-bg-color-4: 	$white;
+$enfasis-color:		$red;
+
+
+//BREAKPOINTS
+$bp-1: 	680px;
+$bp-2:	1020px;

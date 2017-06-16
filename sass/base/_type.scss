@@ -1,0 +1,58 @@
+//FONTS
+
+@import url($font-url);
+
+body {
+	font-family: $font-family;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 900;
+}
+
+//VERTICAL RHYTHM
+p,
+li {
+	@include type-setting(0);
+}
+
+h4 {
+	@include type-setting(1);
+}
+
+h3 {
+	@include type-setting(2);
+}
+
+h2 {
+	@include type-setting(3);
+}
+
+h1 {
+	@include type-setting(4);
+}
+
+//TEXT MAX WIDTH
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+	max-width: $text-max-width;
+}
+
+//COLORS
+body {
+	color: $light-text-color;
+}
+
+h1,
+h2,
+h3 {
+	color: $dark-text-color;
+}
