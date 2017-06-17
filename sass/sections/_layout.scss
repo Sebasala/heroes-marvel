@@ -1,0 +1,19 @@
+header {
+	.width-container {
+		div {
+			padding: $base-line-height $base-line-height;
+		}
+	}
+
+	#marvel-logo {
+		height: $base-line-height * 2;
+	}
+}
+
+#characters,
+#favourites {
+	h2 {
+		padding-left: $base-line-height * 3;
+	}
+}
+

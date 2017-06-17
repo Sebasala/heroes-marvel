@@ -63,6 +63,13 @@ h2,
 h3 {
   color: #2D2727; }
 
+img {
+  display: block; }
+
+body,
+img {
+  max-width: 100%; }
+
 body,
 div,
 section,
@@ -88,34 +95,27 @@ li {
 section {
   padding: 1.5rem 1.5rem 0; }
 
-#characters h2,
-#favourites h2 {
-  padding-left: 4.5rem; }
-
 section:after {
   content: "";
   display: table;
   clear: both; }
 
-body {
-  max-width: 100%; }
-
 @media only screen and (min-width: 1020px) {
-  main {
+  .width-container {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1360px; }
-    main:after {
+    .width-container:after {
       content: "";
       display: table;
       clear: both; }
-    main > *:nth-child(2n+1) {
+    .width-container > *:nth-child(2n+1) {
       width: calc(66.66667%);
       float: left;
       clear: left;
       margin-left: 0; }
-    main > *:nth-child(2n+2) {
+    .width-container > *:nth-child(2n+2) {
       width: calc(33.33333%);
       float: left;
       clear: none;
@@ -123,6 +123,9 @@ body {
 
 body {
   background-color: #F0F0F0; }
+
+header {
+  background-color: #2D2727; }
 
 #characters {
   background-color: #F4F4F4; }
@@ -140,5 +143,14 @@ body {
 
 #favourites h2 {
   background-image: url("../img/icons/favourites.png"); }
+
+header .width-container div {
+  padding: 1.5rem 1.5rem; }
+header #marvel-logo {
+  height: 3rem; }
+
+#characters h2,
+#favourites h2 {
+  padding-left: 4.5rem; }
 
 /*# sourceMappingURL=screen.css.map */

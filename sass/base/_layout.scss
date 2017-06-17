@@ -1,3 +1,14 @@
+//DISPLAYS
+img {
+	display: block;
+}
+
+//WIDTHS
+body,
+img {
+	max-width: 100%;
+}
+
 //MARGINS PADDINGS AND BORDERS
 body,
 div,
@@ -27,25 +38,15 @@ section {
 	padding: $base-line-height $base-line-height 0;
 }
 
-#characters h2,
-#favourites h2 {
-	padding-left: $base-line-height * 3;
-}
-
 //CLEAR FIX
 section {
 	@include clear-fix;
 }
 
-//WIDTHS
-body {
-	max-width: 100%;
-}
-
 //COLUMNS
-main {
+.width-container {
 	@media only screen and (min-width: $bp-2) {
 		@include columns((2,1));
-		max-width: 1360px;
+		max-width: $max-width;
 	}
 }
