@@ -9,6 +9,11 @@ img {
 	max-width: 100%;
 }
 
+.row {
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
 //MARGINS PADDINGS AND BORDERS
 body,
 div,
@@ -41,12 +46,4 @@ section {
 //CLEAR FIX
 section {
 	@include clear-fix;
-}
-
-//COLUMNS
-.width-container {
-	@media only screen and (min-width: $bp-2) {
-		@include columns((2,1));
-		max-width: $max-width;
-	}
 }
