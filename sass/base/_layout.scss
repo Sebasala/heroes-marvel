@@ -43,6 +43,11 @@ section {
 	padding: $base-line-height $base-line-height 0;
 }
 
+//LISTS
+ul {
+	list-style: none;
+}
+
 //CLEAR FIX
 section {
 	@include clear-fix;

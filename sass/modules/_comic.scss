@@ -1,0 +1,36 @@
+.comics-container {
+	padding-top: $base-line-height;
+	height: 100%;
+
+	.comic {
+		@include clear-fix;
+		position: relative;
+		max-width: 300px;
+		margin: 0 auto $base-line-height;
+
+		.delete {
+			position: absolute;
+			right: -$base-line-height * 0.5;
+			top: -$base-line-height * 0.5;
+		}
+
+		.cover {
+			margin-bottom: $base-line-height;
+		}
+	}
+
+	@media only screen and (min-width: $bp-1) {
+		@include columns(2, $margin: 0 $base-line-height $base-line-height);
+		max-width: 640px;
+		margin: 0 auto;
+	}
+
+	@media only screen and (min-width: $bp-2) {
+		@include columns(1);
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}
+
+	
+	
