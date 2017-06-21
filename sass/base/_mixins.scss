@@ -4,9 +4,14 @@
 }
 
 @mixin two-columns-row($bp) {
-	.row {
+	.container>.row {
 		@media only screen and (min-width: $bp) {
 			@include columns((2,1));
+			max-width: $max-width;
+		}
+
+		@media only screen and (min-width: $bp-3) {
+			@include columns((3,1));
 			max-width: $max-width;
 		}
 	}

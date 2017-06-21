@@ -176,45 +176,134 @@ header #marvel-logo {
       float: left;
       clear: none;
       margin-right: 0; } }
-
-@media only screen and (min-width: 1020px) {
-  main .row {
+@media only screen and (min-width: 1360px) {
+  header .row {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1360px; }
-    main .row:after {
+    header .row:after {
       content: "";
       display: table;
       clear: both; }
-    main .row > *:nth-child(2n+1) {
-      width: calc(66.66667%);
+    header .row > *:nth-child(3n+1) {
+      width: calc(25%);
       float: left;
       clear: left;
       margin-left: 0; }
-    main .row > *:nth-child(2n+2) {
-      width: calc(33.33333%);
+    header .row > *:nth-child(3n+2) {
+      width: calc(50%);
+      float: left;
+      clear: none; }
+    header .row > *:nth-child(3n+3) {
+      width: calc(25%);
       float: left;
       clear: none;
       margin-right: 0; } }
 
-@media only screen and (min-width: 680px) {
-  footer .row {
+@media only screen and (min-width: 1020px) {
+  main .container > .row {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1360px; }
-    footer .row:after {
+    main .container > .row:after {
       content: "";
       display: table;
       clear: both; }
-    footer .row > *:nth-child(2n+1) {
+    main .container > .row > *:nth-child(2n+1) {
       width: calc(66.66667%);
       float: left;
       clear: left;
       margin-left: 0; }
-    footer .row > *:nth-child(2n+2) {
+    main .container > .row > *:nth-child(2n+2) {
       width: calc(33.33333%);
+      float: left;
+      clear: none;
+      margin-right: 0; } }
+@media only screen and (min-width: 1360px) {
+  main .container > .row {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1360px; }
+    main .container > .row:after {
+      content: "";
+      display: table;
+      clear: both; }
+    main .container > .row > *:nth-child(2n+1) {
+      width: calc(75%);
+      float: left;
+      clear: left;
+      margin-left: 0; }
+    main .container > .row > *:nth-child(2n+2) {
+      width: calc(25%);
+      float: left;
+      clear: none;
+      margin-right: 0; } }
+@media only screen and (min-width: 1360px) {
+  main .characters-container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1360px; }
+    main .characters-container:after {
+      content: "";
+      display: table;
+      clear: both; }
+    main .characters-container > *:nth-child(2n+1) {
+      width: calc(50% - 1.5rem - 1.5rem + 0.75rem + 0.75rem);
+      float: left;
+      margin: 0 1.5rem 1.5rem;
+      clear: left;
+      margin-left: 0; }
+    main .characters-container > *:nth-child(2n+2) {
+      width: calc(50% - 1.5rem - 1.5rem + 0.75rem + 0.75rem);
+      float: left;
+      margin: 0 1.5rem 1.5rem;
+      clear: none;
+      margin-right: 0; } }
+main #characters h2,
+main #favourites h2 {
+  padding-left: 4.5rem; }
+
+@media only screen and (min-width: 680px) {
+  footer .container > .row {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1360px; }
+    footer .container > .row:after {
+      content: "";
+      display: table;
+      clear: both; }
+    footer .container > .row > *:nth-child(2n+1) {
+      width: calc(66.66667%);
+      float: left;
+      clear: left;
+      margin-left: 0; }
+    footer .container > .row > *:nth-child(2n+2) {
+      width: calc(33.33333%);
+      float: left;
+      clear: none;
+      margin-right: 0; } }
+@media only screen and (min-width: 1360px) {
+  footer .container > .row {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1360px; }
+    footer .container > .row:after {
+      content: "";
+      display: table;
+      clear: both; }
+    footer .container > .row > *:nth-child(2n+1) {
+      width: calc(75%);
+      float: left;
+      clear: left;
+      margin-left: 0; }
+    footer .container > .row > *:nth-child(2n+2) {
+      width: calc(25%);
       float: left;
       clear: none;
       margin-right: 0; } }
@@ -229,10 +318,6 @@ footer .grability-logo-container img {
   height: 3rem; }
 footer .col {
   padding: 1.5rem 1.5rem; }
-
-#characters h2,
-#favourites h2 {
-  padding-left: 4.5rem; }
 
 .search {
   background-color: #F4F4F4;
@@ -258,5 +343,76 @@ footer .col {
     background-color: transparent; }
     .search button img {
       height: 3rem; }
+
+.character-container {
+  padding-top: 1.5rem; }
+  .character-container .character {
+    background-color: #FFFFFF;
+    margin-bottom: 3rem; }
+    .character-container .character img {
+      border-radius: 100%;
+      box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.5);
+      margin: -2.25rem auto 3rem; }
+      @media only screen and (min-width: 680px) {
+        .character-container .character img {
+          margin-left: -2.25rem; } }
+      @media only screen and (min-width: 1360px) {
+        .character-container .character img {
+          max-width: 120%; } }
+    .character-container .character h3 {
+      text-transform: uppercase; }
+    .character-container .character button {
+      height: 3rem;
+      padding: 0.75rem;
+      border: 0;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+      background-color: #EC1D23;
+      color: #FFFFFF; }
+    .character-container .character .related-comics {
+      padding-top: 1.5rem; }
+      .character-container .character .related-comics ul {
+        list-style-type: none; }
+        @media only screen and (min-width: 680px) {
+          .character-container .character .related-comics ul {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto; }
+            .character-container .character .related-comics ul:after {
+              content: "";
+              display: table;
+              clear: both; }
+            .character-container .character .related-comics ul > *:nth-child(2n+1) {
+              width: calc(50% - 1.5rem - 1.5rem + 0.75rem + 0.75rem);
+              float: left;
+              margin: 0 1.5rem 1.5rem;
+              clear: left;
+              margin-left: 0; }
+            .character-container .character .related-comics ul > *:nth-child(2n+2) {
+              width: calc(50% - 1.5rem - 1.5rem + 0.75rem + 0.75rem);
+              float: left;
+              margin: 0 1.5rem 1.5rem;
+              clear: none;
+              margin-right: 0; } }
+    @media only screen and (min-width: 680px) {
+      .character-container .character .row {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto; }
+        .character-container .character .row:after {
+          content: "";
+          display: table;
+          clear: both; }
+        .character-container .character .row > *:nth-child(2n+1) {
+          width: calc(33.33333%);
+          float: left;
+          clear: left;
+          margin-left: 0; }
+        .character-container .character .row > *:nth-child(2n+2) {
+          width: calc(66.66667%);
+          float: left;
+          clear: none;
+          margin-right: 0; } }
 
 /*# sourceMappingURL=screen.css.map */

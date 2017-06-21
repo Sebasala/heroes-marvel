@@ -1,0 +1,54 @@
+.character-container {
+	padding-top: $base-line-height;
+
+	.character {
+		background-color: $light-bg-color-4;
+		margin-bottom: $base-line-height * 2;
+
+		img {
+			border-radius: 100%;
+			box-shadow: 2px 1px 10px 1px rgba(black, 0.5);
+			margin: -$base-line-height * 1.5 auto $base-line-height * 2;
+
+			@media only screen and (min-width: $bp-1) {
+				margin-left: -$base-line-height * 1.5;
+			}
+
+			@media only screen and (min-width: $bp-3) {
+				max-width: 120%;
+			}
+		}
+
+		h3 {
+			text-transform: uppercase;
+		}
+
+		button {
+			height: $base-line-height * 2;
+			padding: $base-line-height * 0.5;
+			border: 0;
+			@include type-setting(1);
+			text-transform: uppercase;
+			background-color: $enfasis-color;
+			color: $white;
+		}
+
+		.related-comics {
+			padding-top: $base-line-height;
+
+			ul {
+				list-style-type: none;
+				
+				@media only screen and (min-width: $bp-1) {
+					@include columns(2, $margin: 0 $base-line-height $base-line-height);	
+				} 
+			}
+		}
+
+		.row {
+			@media only screen and (min-width: $bp-1) {
+				@include columns((1, 2));
+			}
+		}
+	}
+}
