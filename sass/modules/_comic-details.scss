@@ -1,0 +1,126 @@
+.lightbox {
+	position: fixed;
+	top: 0;
+	background-color: $light-bg-color-4;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba($dark-bg-color, 0.9);
+	display: none;
+
+
+	.comic-details {
+		position: relative;
+		max-width: $bp-2;
+		margin: 0 auto;
+		background-color: $light-bg-color-4;
+	}
+
+	.close-button {
+		position: absolute;
+		right: $base-line-height;
+		top: $base-line-height;
+	}
+
+	.content {
+		overflow: hidden;
+
+		img {
+			height: calc(30vh - 24px);
+		}
+
+		.text {
+			padding-top: $base-line-height;
+			height: calc(70vh - 48px);
+			overflow: auto;
+
+			h2 {
+				text-transform: uppercase;
+			}
+
+			@media only screen and (min-width: $bp-2) {
+				height: auto;
+			}
+		}
+
+		@media only screen and (min-width: $bp-1) {
+			@include columns((1, 2), $margin: 0 $base-line-height * 0.5 $base-line-height);
+			max-width: $bp-2;
+			height: calc(100vh - 48px);
+
+			div {
+				padding-top: $base-line-height;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		@media only screen and (min-width: $bp-2) {
+			height: auto;
+		}
+	}
+
+	.buttons {
+		@include columns(2);
+		max-width: $bp-2;
+
+		li {
+			margin: 0;
+		}
+
+		button {
+			width: 100%;
+			height: $base-line-height * 2;
+			padding: 0 $base-line-height;
+			border: 0;
+			margin: 0;
+			text-transform: uppercase;
+
+			@media only screen and (min-width: $bp-1) {
+				@include type-setting(1);
+
+				&::before {
+					content: " ";
+					display: inline-block;
+					width: $base-line-height;
+					height: $base-line-height;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					vertical-align: middle;
+					margin-right: $base-line-height * 0.5;
+				}
+			}
+		}
+
+		.add-button {
+			background-color: $light-bg-color-3;
+
+			@media only screen and (min-width: $bp-1) {
+				&::before {
+					background-image: url("../img/icons/btn-favourites-default.png");
+				}
+			}
+		}
+
+		.buy-button {
+			background-color: $light-bg-color-1;
+			color: $enfasis-color;
+
+			@media only screen and (min-width: $bp-1) {
+				&::before {
+					background-image: url("../img/icons/shopping-cart-primary.png");
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: $bp-2) {
+		padding: $base-line-height 0;
+		display: none;
+		justify-content: center;
+		align-items: center;
+	}	
+}

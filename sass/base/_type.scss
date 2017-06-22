@@ -2,7 +2,9 @@
 
 @import url($font-url);
 
-body {
+body,
+button,
+input {
 	font-family: $font-family;
 	font-weight: 400;
 }
