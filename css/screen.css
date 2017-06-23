@@ -355,7 +355,7 @@ footer .col {
   padding-top: 1.5rem; }
   .character-container .character {
     background-color: #FFFFFF;
-    margin-bottom: 3rem; }
+    margin-bottom: 1.5rem; }
     .character-container .character img {
       border-radius: 100%;
       box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.5);
@@ -600,6 +600,32 @@ footer .col {
       display: none;
       justify-content: center;
       align-items: center; } }
+
+.pagination {
+  margin-bottom: 3rem;
+  text-align: center; }
+  .pagination li {
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    margin: 0 4.5px; }
+    @media only screen and (min-width: 680px) {
+      .pagination li {
+        margin: 0 0.75rem; } }
+    .pagination li a {
+      display: block;
+      background-color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 900;
+      width: 1.5rem;
+      height: 1.5rem; }
+      @media only screen and (min-width: 680px) {
+        .pagination li a {
+          width: 3rem;
+          height: 3rem;
+          padding: 0.75rem; } }
+      .pagination li a:active, .pagination li a:focus, .pagination li a:hover, .pagination li a:visited {
+        color: #7A7070; }
 
 .visible {
   display: block; }
