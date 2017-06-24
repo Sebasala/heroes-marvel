@@ -18,7 +18,8 @@ body {
 /*--------- End of NeutronCSS ---------*/
 body,
 button,
-input {
+input,
+select {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
 
@@ -29,7 +30,8 @@ h4 {
   font-weight: 900; }
 
 p,
-li {
+li,
+select {
   font-size: 1rem;
   line-height: 1.5rem; }
 
@@ -248,6 +250,28 @@ header {
       float: left;
       clear: none;
       margin-right: 0; } }
+@media only screen and (min-width: 680px) {
+  main .characters-top {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1700px; }
+    main .characters-top:after {
+      content: "";
+      display: table;
+      clear: both; }
+    main .characters-top > *:nth-child(2n+1) {
+      width: calc(50%);
+      float: left;
+      clear: left;
+      margin-left: 0; }
+    main .characters-top > *:nth-child(2n+2) {
+      width: calc(50%);
+      float: left;
+      clear: none;
+      margin-right: 0; }
+    main .characters-top .sort-by-container {
+      text-align: right; } }
 @media only screen and (min-width: 1360px) {
   main .characters-container {
     max-width: 960px;
@@ -600,6 +624,11 @@ footer .col {
       display: none;
       justify-content: center;
       align-items: center; } }
+
+#sort-by {
+  height: 3rem;
+  padding: 0 0.75rem;
+  background-color: #FFFFFF; }
 
 .pagination {
   margin-bottom: 3rem;

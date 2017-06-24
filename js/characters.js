@@ -11,6 +11,7 @@ $(document).ready(function() {
 	var characterThumbnailSrc = "";
 	var characterFirstComicsList = [];
 	var searchTerm = "";
+	var orderVal = "-modified";
 	
 	var $charactersContainer = $('.characters-container');
 	var $characterTemplate = $('<li class="col character-container">' +
@@ -35,6 +36,7 @@ $(document).ready(function() {
 	var $comicHTML = $('<li class="col"></li>');
 	var $searchButton = $('#search-button');
 	var $searchInput = $('#search-input');
+	var $orderSelect = $('#sort-by');
 
 
 	//FUNCIONES
@@ -43,7 +45,7 @@ $(document).ready(function() {
 		$.getJSON( charactersURI, {
 			apikey: "b7d3e92174566cf327622bfd1a930a14",
 			limit: 10,
-			orderBy: "-modified"
+			orderBy: orderVal
 		}, function( response ) {
 			//Para cada resultado
 			$.each(response.data.results, function(index, item) {
@@ -116,7 +118,7 @@ $(document).ready(function() {
 			$.getJSON( charactersURI, {
 				apikey: "b7d3e92174566cf327622bfd1a930a14",
 				limit: 10,
-				orderBy: "name",
+				orderBy: orderVal,
 				nameStartsWith: searchTerm
 			}, function( response ) {
 				//Para cada resultado
@@ -134,7 +136,7 @@ $(document).ready(function() {
 
 	//CUANDO SE HAGA UNA BUSQUEDA MOSTRAR LOS PRIMEROS 10 RESULTADOS DE PERSONAJES
 	//Cuando se presione el botón buscar
-	$searchButton.click(function() {
+	$searchButton.click(function(event) {
 		//Buscar los personajes que cuyo nombre comienza con el termino de búsqueda
 		searchCharacters();
 	});
@@ -145,5 +147,16 @@ $(document).ready(function() {
 	        //Buscar los personajes
 	        searchCharacters();
 	    }
+	});
+
+	//AL SELECCIONAR UNA OPCIÓN PARA ORDENAR LOS RESULTADOS
+	$orderSelect.change(function(event) {
+		//Si el valor de option es valido
+		if ($(this).val() != "" ) {
+			orderVal = $(this).val();
+
+			//Arrojar los resultados en ese orden
+			searchCharacters();
+		}
 	});
 });

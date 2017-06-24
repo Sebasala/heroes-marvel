@@ -31,6 +31,17 @@ header {
 main {
 	@include two-columns-row($bp-2);
 	
+	.characters-top {
+		@media only screen and (min-width: $bp-1) {
+			@include columns(2);
+			max-width: $max-width;
+
+			.sort-by-container {
+				text-align: right;
+			}
+		}
+	}
+
 	.characters-container {
 		@media only screen and (min-width: $bp-3) {
 			@include columns(2, $margin: 0 $base-line-height $base-line-height);

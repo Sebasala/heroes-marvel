@@ -4,7 +4,8 @@
 
 body,
 button,
-input {
+input,
+select {
 	font-family: $font-family;
 	font-weight: 400;
 }
@@ -18,7 +19,8 @@ h4 {
 
 //VERTICAL RHYTHM
 p,
-li {
+li,
+select {
 	@include type-setting(0);
 }
 
